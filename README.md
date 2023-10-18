@@ -11,6 +11,5 @@ a web mail server using Roundcube for a company. soon, i'll add some new feature
 
 
 # Progress:
-install LAMP stack and Roundcube ✅
-
-add extension for php (some extension must installed manually, and get error cause php7.4 is too old🙃)
+- install LAMP stack and Roundcube ✅
+- add extension for php (some extension must installed manually, and get error cause php7.4 is too old🙃)
