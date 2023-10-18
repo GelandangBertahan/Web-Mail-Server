@@ -4,7 +4,7 @@ a web mail server using Roundcube for a company. soon, i'll add some new feature
 
 
 # Requirement:
-1. LAMP stack (can replace Apache with Nginx, and MySQL with MariaDB)
+1. LAMP stack 
    The Linux i use is Ubuntu Server 20.04, Apache2, MySQL(sorry i forgot my mysql version), and PHP version 7.4. LAMP stack can be installed using docker, but for now i just using conventional method. here apache can be replace with Nginx and MySQL can be replaced by MariaDB
 2. Roundcube. https://github.com/roundcube/roundcubemail/releases
 3. and many more software 
