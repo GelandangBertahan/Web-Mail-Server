@@ -6,7 +6,7 @@ a web mail server using Roundcube.
 # Requirements:
 1. Web Server (Apache or Nginx)
 2. PHP
-3. Databases
+3. DBMS
 4. Roundcube. download here https://github.com/roundcube/roundcubemail/releases
 
 
@@ -27,7 +27,7 @@ a web mail server using Roundcube.
      sudo apt install -y php8.1 libapache2-mod-php8.1
      sudo apt install php-net-ldap2 php-net-ldap3 php-imagick php8.1-common php8.1-gd php8.1-imap php8.1-mysql php8.1-curl php8.1-zip php8.1-xml php8.1-mbstring php8.1-bz2 php8.1-intl php8.1-gmp php8.1-redis
      ```
-   - Databases
+   - DBMS
      ```
      sudo apt install -y mariadb-server mariadb-client
      ```
@@ -41,3 +41,19 @@ a web mail server using Roundcube.
      ```
      you can also use ftp software or use git clone
      
+2. create a database
+   - enter mysql as a root user
+   ```
+   sudo mysql -u root
+   ```
+   - create database, user and password for roundcube. then give all privileges to user
+   ```
+   CREATE DATABASE <database_name> DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+   CREATE USER <user_name>@localhost IDENTIFIED BY '<user_password>'
+   GRANT ALL PRIVILEGES ON <database_name>.* TO <user_name>@localhost;
+   FLUSH PRIVILEGES;
+   exit;
+   ```
+3. create virtual host fro roundcube
+   - create file /etc/<apache2><nginx>/sites-available/<domain_name>.conf 
+6. 
