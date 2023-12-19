@@ -12,7 +12,7 @@ a web mail server using Roundcube.
 
 # Step-by-Step:
 1. install all requirements
-   - Web Server
+   - Web Server \n
      if you want to use Apache on Debian based:
      ```
      sudo apt install apache2 -y
