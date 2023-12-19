@@ -14,13 +14,13 @@ a web mail server using Roundcube.
 1. install all requirements
    - Web Server
      if you want to use Apache on Debian based:
-     '''
+     ```
      sudo apt install apache2 -y
-     '''
+     ```
      if you want to use Apache on RHEL based:
-     '''
+     ```
      sudo yum install apache2 -y
-     '''
+     ```
    - PHP
    - Databases
    - Download Roundcube
