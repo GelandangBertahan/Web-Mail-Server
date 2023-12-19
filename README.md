@@ -3,13 +3,24 @@ a web mail server using Roundcube.
 
 
 
-# Requirement:
-1. LAMP stack 
-   The Linux i use is Ubuntu Server 20.04, Apache2, MySQL(sorry i forgot my mysql version), and PHP version 7.4. LAMP stack can be installed using docker, but for now i just using conventional method. here apache can be replace with Nginx and MySQL can be replaced by MariaDB
-2. Roundcube. https://github.com/roundcube/roundcubemail/releases
+# Requirements:
+1. Web Server (Apache or Nginx)
+2. PHP
+3. Databases
+4. Roundcube. download here https://github.com/roundcube/roundcubemail/releases
 
 
-# Progress:
-- install LAMP stack and Roundcube (manually)✅
-- add extension for php (some extension must installed manually, and get error cause php7.4 is too old🙃)
-- install LAMP with docker
+# Step-by-Step:
+1. install all requirements
+   - Web Server
+     if you want to use Apache on Debian based:
+     '''
+     sudo apt install apache2 -y
+     '''
+     if you want to use Apache on RHEL based:
+     '''
+     sudo yum install apache2 -y
+     '''
+   - PHP
+   - Databases
+   - Download Roundcube
