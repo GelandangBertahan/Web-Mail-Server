@@ -54,6 +54,33 @@ a web mail server using Roundcube.
    FLUSH PRIVILEGES;
    exit;
    ```
-3. create virtual host fro roundcube
-   - create file /etc/<apache2><nginx>/sites-available/<domain_name>.conf 
-6. 
+3. create virtual host for roundcube
+   - create file /etc/<apache2><nginx>/sites-available/<domain_name>.conf
+   - to activate domain, use a2ensite
+     ```
+     a2ensite your_domain.conf
+     ```
+4. download roundcube use wget
+   ```
+   wget https://github.com/roundcube/roundcubemail/releases/download/1.5.2/roundcubemail-1.5.2-complete.tar.gz
+   ```
+   then extract use tar
+   ```
+   tar xvf roundcubemail-1.5.2-complete.tar.gz
+   ```
+   move to directory /var/www/roundcube and set owner to www-data for 2 directories. last, import database to file mysql.initial.sql
+5. create user for client
+   - for create user client, we can make user from vm server
+     ```
+     adduser <user>
+     ```
+   - add config for smtp user at config.inc.php, add this line 
+     ```
+     $config['smtp_user'] = ''
+     ```
+6. set timezone at php.ini
+7. access roundcube domain installer with your browser. http://<yourdomain.com>/installer
+8. config database setup, imap setting and smtp setting then press "CREATE CONFIG"
+9. remove folder installer at roundcube
+10. access again your domain server without /installer
+
